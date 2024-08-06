@@ -17,7 +17,6 @@ public class Main {
         users.add(new User("Vlad", "Skala", (byte) 25));
         users.add(new User("Tolya", "Bugor", (byte) 52));
         users.add(new User("Jesus", "Christ", (byte) 33));
-
         for (User user : users) {
             userService.saveUser(user.getName(), user.getLastName(), (byte) user.getAge());
         }
@@ -25,10 +24,7 @@ public class Main {
         for (User user : usersTable) {
             System.out.println(user);
         }
-
         userService.cleanUsersTable();
         userService.dropUsersTable();
-
-
     }
 }
